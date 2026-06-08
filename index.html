@@ -222,23 +222,48 @@
                         <button class="btn-outline" id="settings-ollama-test">Test Connection</button>
                         <div class="settings-status" id="settings-ollama-status"></div>
                     </div>
+                    <button class="ref-toggle-btn help-toggle-btn" data-target="help-ollama" style="margin-top: 0.5rem; font-size: 0.85rem; padding: 0.5rem;">❓ How to setup Ollama</button>
+                    <div class="ref-image-container hidden" id="help-ollama" style="padding: 1rem; background: rgba(0,0,0,0.2); text-align: left; font-size: 0.9rem; border-radius: 8px;">
+                        <ol style="margin-left: 1.5rem; line-height: 1.4;">
+                            <li>Download and install Ollama from <a href="https://ollama.com" target="_blank" style="color: var(--primary-color);">ollama.com</a>.</li>
+                            <li>Open your terminal or command prompt.</li>
+                            <li>Run <code>ollama run gemma2:2b</code> to download and start the model.</li>
+                            <li>Keep Ollama running in the background while studying.</li>
+                        </ol>
+                    </div>
                 </div>
 
                 <!-- Gemini Settings -->
                 <div id="settings-gemini-group" class="hidden">
-                    <div class="settings-group">
+                    <div class="settings-group" style="margin-bottom: 0.5rem;">
                         <label for="settings-gemini-key">Gemini API Key</label>
                         <input type="password" id="settings-gemini-key" class="settings-input" placeholder="AIza...">
-                        <p class="settings-hint">Get a free key at <a href="https://aistudio.google.com/apikey" target="_blank" style="color: var(--primary-color);">Google AI Studio</a></p>
+                    </div>
+                    <button class="ref-toggle-btn help-toggle-btn" data-target="help-gemini" style="font-size: 0.85rem; padding: 0.5rem;">❓ How to get a Gemini API Key</button>
+                    <div class="ref-image-container hidden" id="help-gemini" style="padding: 1rem; background: rgba(0,0,0,0.2); text-align: left; font-size: 0.9rem; border-radius: 8px;">
+                        <ol style="margin-left: 1.5rem; line-height: 1.4;">
+                            <li>Go to <a href="https://aistudio.google.com/apikey" target="_blank" style="color: var(--primary-color);">Google AI Studio</a> and sign in.</li>
+                            <li>Click on <strong>Create API key</strong>.</li>
+                            <li>Select or create a Google Cloud project.</li>
+                            <li>Copy the generated key (it starts with <code>AIza...</code>) and paste it above.</li>
+                        </ol>
                     </div>
                 </div>
 
                 <!-- Groq Settings -->
                 <div id="settings-groq-group" class="hidden">
-                    <div class="settings-group">
+                    <div class="settings-group" style="margin-bottom: 0.5rem;">
                         <label for="settings-groq-key">Groq API Key</label>
                         <input type="password" id="settings-groq-key" class="settings-input" placeholder="gsk_...">
-                        <p class="settings-hint">Get a free key at <a href="https://console.groq.com/keys" target="_blank" style="color: var(--primary-color);">Groq Console</a></p>
+                    </div>
+                    <button class="ref-toggle-btn help-toggle-btn" data-target="help-groq" style="font-size: 0.85rem; padding: 0.5rem;">❓ How to get a Groq API Key</button>
+                    <div class="ref-image-container hidden" id="help-groq" style="padding: 1rem; background: rgba(0,0,0,0.2); text-align: left; font-size: 0.9rem; border-radius: 8px;">
+                        <ol style="margin-left: 1.5rem; line-height: 1.4;">
+                            <li>Go to <a href="https://console.groq.com/keys" target="_blank" style="color: var(--primary-color);">Groq Console</a> and sign in.</li>
+                            <li>Click on <strong>Create API Key</strong>.</li>
+                            <li>Give it a name (like "Study App").</li>
+                            <li>Copy the generated key (it starts with <code>gsk_...</code>) and paste it above.</li>
+                        </ol>
                     </div>
                 </div>
 

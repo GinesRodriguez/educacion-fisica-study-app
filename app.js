@@ -868,6 +868,17 @@ function init() {
     });
     document.getElementById('settings-save').addEventListener('click', saveSettings);
     document.getElementById('settings-ollama-test').addEventListener('click', testOllamaConnection);
+    
+    // Help toggles in settings
+    document.querySelectorAll('.help-toggle-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const targetId = e.target.getAttribute('data-target');
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.classList.toggle('hidden');
+            }
+        });
+    });
 
     // Data management
     document.getElementById('settings-export').addEventListener('click', exportProgress);
