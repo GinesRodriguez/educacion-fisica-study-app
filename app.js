@@ -348,10 +348,13 @@ function renderQuestion() {
 
     area.innerHTML = `
         <div class="question-card" id="question-card">
-            <div class="question-meta">
-                <span class="badge badge-topic">${escapeHtml(q.topic)}</span>
-                ${typeBadge}
-                ${statusBadge}
+            <div class="question-meta" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; flex-wrap: wrap;">
+                <div>
+                    <span class="badge badge-topic">${escapeHtml(q.topic)}</span>
+                    ${typeBadge}
+                    ${statusBadge}
+                </div>
+                <button class="btn-outline" id="inline-report-btn" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; border: 1px solid var(--surface-border); opacity: 0.7; border-radius: 6px;">🚩 Report Error</button>
             </div>
             <h2 class="question-text">${escapeHtml(q.text)}</h2>
             ${answerHTML}
@@ -372,6 +375,15 @@ function renderQuestion() {
             if (e.key === 'Enter' && e.ctrlKey) handleSAAnswer(qIdx);
         });
     }
+
+    document.getElementById('inline-report-btn').addEventListener('click', () => {
+        showScreen('report');
+        document.getElementById('report-type').value = 'question';
+        document.getElementById('report-type').dispatchEvent(new Event('change'));
+        const shortText = q.text.length > 80 ? q.text.substring(0, 80) + '...' : q.text;
+        document.getElementById('report-question').value = `Q${qIdx + 1}: ${shortText}`;
+        document.getElementById('report-details').focus();
+    });
 }
 
 function shuffleOptions(q) {
@@ -928,7 +940,30 @@ function init() {
 
     document.getElementById('report-form').addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Report submitted successfully! Thank you for your feedback.');
+        
+        const type = document.getElementById('report-type').value;
+        const qContext = document.getElementById('report-question').value;
+        const fContext = document.getElementById('report-feature').value;
+        const details = document.getElementById('report-details').value;
+
+        let subject = `[PE Study App Report] `;
+        let body = `Issue Type: ${type}\n\n`;
+
+        if (type === 'question') {
+            subject += `Question Error`;
+            body += `Context: ${qContext}\n\n`;
+        } else if (type === 'feature') {
+            subject += `Feature/Bug`;
+            body += `Context: ${fContext}\n\n`;
+        } else {
+            subject += `General Feedback`;
+        }
+
+        body += `Details:\n${details}\n`;
+
+        // Generate email
+        window.location.href = `mailto:gines.rodriguez@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
         e.target.reset();
         reportQGroup.classList.add('hidden');
         reportFGroup.classList.add('hidden');
