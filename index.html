@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE Didactics – Spaced Repetition Study App</title>
+    <meta name="description" content="Study Physical Education Didactics with spaced repetition, adaptive review scheduling, and LLM-powered answer evaluation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- LEVEL UP OVERLAY -->
+    <div id="levelup-overlay" class="levelup-overlay hidden">
+        <div id="confetti-container" class="confetti-container"></div>
+        <div class="levelup-content">
+            <div class="levelup-icon" id="levelup-icon">🏅</div>
+            <h1 class="levelup-title">Level Up!</h1>
+            <p class="levelup-level" id="levelup-level">You are now: Expert</p>
+            <button id="levelup-close-btn" class="levelup-btn">Continue</button>
+        </div>
+    </div>
+
+    <main class="app-container">
+        <!-- NAVIGATION -->
+        <nav class="nav-bar" id="nav-bar">
+            <button class="nav-btn active" data-screen="dashboard" id="nav-dashboard">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Home</span>
+            </button>
+            <button class="nav-btn" data-screen="study" id="nav-study">
+                <span class="nav-icon">📖</span>
+                <span class="nav-label">Study</span>
+            </button>
+            <button class="nav-btn" data-screen="stats" id="nav-stats">
+                <span class="nav-icon">📊</span>
+                <span class="nav-label">Stats</span>
+            </button>
+            <button class="nav-btn" data-screen="settings" id="nav-settings">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-label">Settings</span>
+            </button>
+        </nav>
+
+        <!-- ═══════════ DASHBOARD ═══════════ -->
+        <section id="screen-dashboard" class="screen active">
+            <div class="card card-glow-primary">
+                <div class="dashboard-header">
+                    <h1 class="title">PE Didactics <span class="accent">Study</span></h1>
+                    <p class="subtitle">Spaced Repetition Learning System</p>
+
+                    <div class="level-display">
+                        <div class="level-icon" id="dash-level-icon">🌱</div>
+                        <div class="level-info">
+                            <div class="level-name" id="dash-level-name">Novice</div>
+                            <div class="level-rank" id="dash-level-rank">Level 1</div>
+                        </div>
+                    </div>
+
+                    <div class="xp-bar-container">
+                        <div class="xp-bar-fill" id="dash-xp-bar" style="width: 0%"></div>
+                    </div>
+                    <p class="xp-text" id="dash-xp-text">0 / 100 XP</p>
+
+                    <div class="streak-badge" id="dash-streak">
+                        <span>🔥</span>
+                        <span id="dash-streak-count">0</span>
+                        <span>day streak</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="stats-row" id="dash-stats-row">
+                <div class="stat-card">
+                    <div class="stat-value text-primary" id="dash-total">0</div>
+                    <div class="stat-label">Total</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value text-success" id="dash-mastered">0</div>
+                    <div class="stat-label">Mastered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value text-warning" id="dash-learning">0</div>
+                    <div class="stat-label">Learning</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value text-accent" id="dash-due">0</div>
+                    <div class="stat-label">Due Now</div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="action-btn primary" id="btn-study-now">
+                    <span class="action-icon">🚀</span>
+                    <span>Study Now</span>
+                    <span class="action-count" id="btn-study-count">All pending questions</span>
+                </button>
+                <button class="action-btn" id="btn-review-due">
+                    <span class="action-icon">🔄</span>
+                    <span>Review Due</span>
+                    <span class="action-count" id="btn-review-count">0 cards</span>
+                </button>
+                <button class="action-btn" id="btn-new-only">
+                    <span class="action-icon">✨</span>
+                    <span>New Cards</span>
+                    <span class="action-count" id="btn-new-count">0 cards</span>
+                </button>
+            </div>
+
+            <!-- Topic Mastery Overview -->
+            <div class="card" style="margin-top: 1.5rem;">
+                <h2>📚 Topic Mastery</h2>
+                <div class="topic-mastery-grid" id="dash-topic-grid">
+                    <!-- Generated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ STUDY SESSION ═══════════ -->
+        <section id="screen-study" class="screen">
+            <!-- Study Header -->
+            <div class="study-header">
+                <div class="study-progress">
+                    <span class="session-counter" id="study-counter">1 / 20</span>
+                    <span class="streak-counter">
+                        <span>🔥</span>
+                        <span id="study-streak">0</span>
+                    </span>
+                </div>
+                <button class="exit-btn" id="study-exit-btn">✕ End Session</button>
+            </div>
+
+            <!-- Topic Filter -->
+            <div class="topic-filter" id="study-topic-filter">
+                <!-- Generated by JS -->
+            </div>
+
+            <!-- Question Area -->
+            <div id="study-question-area">
+                <!-- Populated by JS: question card or session complete -->
+            </div>
+        </section>
+
+        <!-- ═══════════ STATISTICS ═══════════ -->
+        <section id="screen-stats" class="screen">
+            <div class="card">
+                <h1 class="title" style="font-size: 1.8rem; margin-bottom: 1rem;">📊 <span class="accent">Statistics</span></h1>
+
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <div class="stat-value text-primary" id="stats-total-answered">0</div>
+                        <div class="stat-label">Answered</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value text-success" id="stats-accuracy">0%</div>
+                        <div class="stat-label">Accuracy</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value text-warning" id="stats-best-streak">0</div>
+                        <div class="stat-label">Best Streak</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value text-accent" id="stats-total-xp">0</div>
+                        <div class="stat-label">Total XP</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Mastery by Topic</h2>
+                <div class="stats-detail-grid" id="stats-topic-detail">
+                    <!-- Generated by JS -->
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>🏆 Hardest Questions</h2>
+                <div id="stats-hardest" class="stats-detail-grid">
+                    <!-- Generated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ SETTINGS ═══════════ -->
+        <section id="screen-settings" class="screen">
+            <div class="card">
+                <h1 class="title" style="font-size: 1.8rem; margin-bottom: 1.5rem;">⚙️ <span class="accent">Settings</span></h1>
+
+                <h2>🤖 LLM Backend</h2>
+                <p class="subtitle" style="text-align: left; margin-bottom: 1rem;">Configure how short-answer questions are evaluated.</p>
+
+                <div class="settings-group">
+                    <label for="settings-backend">Evaluation Backend</label>
+                    <select id="settings-backend" class="settings-select">
+                        <option value="ollama">Ollama (Local – Gemma)</option>
+                        <option value="gemini">Google Gemini API</option>
+                        <option value="groq">Groq API</option>
+                        <option value="keywords">Keyword Matching (Offline)</option>
+                    </select>
+                </div>
+
+                <!-- Ollama Settings -->
+                <div id="settings-ollama-group">
+                    <div class="settings-group">
+                        <label for="settings-ollama-url">Ollama URL</label>
+                        <input type="text" id="settings-ollama-url" class="settings-input" value="http://localhost:11434" placeholder="http://localhost:11434">
+                    </div>
+                    <div class="settings-group">
+                        <label for="settings-ollama-model">Model</label>
+                        <input type="text" id="settings-ollama-model" class="settings-input" value="gemma2:2b" placeholder="gemma2:2b">
+                    </div>
+                    <div class="settings-group">
+                        <button class="btn-outline" id="settings-ollama-test">Test Connection</button>
+                        <div class="settings-status" id="settings-ollama-status"></div>
+                    </div>
+                </div>
+
+                <!-- Gemini Settings -->
+                <div id="settings-gemini-group" class="hidden">
+                    <div class="settings-group">
+                        <label for="settings-gemini-key">Gemini API Key</label>
+                        <input type="password" id="settings-gemini-key" class="settings-input" placeholder="AIza...">
+                        <p class="settings-hint">Get a free key at <a href="https://aistudio.google.com/apikey" target="_blank" style="color: var(--primary-color);">Google AI Studio</a></p>
+                    </div>
+                </div>
+
+                <!-- Groq Settings -->
+                <div id="settings-groq-group" class="hidden">
+                    <div class="settings-group">
+                        <label for="settings-groq-key">Groq API Key</label>
+                        <input type="password" id="settings-groq-key" class="settings-input" placeholder="gsk_...">
+                        <p class="settings-hint">Get a free key at <a href="https://console.groq.com/keys" target="_blank" style="color: var(--primary-color);">Groq Console</a></p>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <label>
+                        <input type="checkbox" id="settings-auto-fallback" checked>
+                        Auto-fallback to other backends if primary fails
+                    </label>
+                </div>
+
+                <button class="btn-outline" id="settings-save" style="background: linear-gradient(135deg, var(--primary-color), #818cf8); color: white; border: none; padding: 0.8rem 1.5rem;">
+                    Save Settings
+                </button>
+            </div>
+
+            <div class="card">
+                <h2>🗄️ Data Management</h2>
+                <div class="settings-actions">
+                    <button class="btn-outline" id="settings-export">📤 Export Progress</button>
+                    <button class="btn-outline" id="settings-import">📥 Import Progress</button>
+                    <button class="btn-outline btn-danger" id="settings-reset">🗑️ Reset All Progress</button>
+                </div>
+                <input type="file" id="settings-import-file" class="hidden" accept=".json">
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
