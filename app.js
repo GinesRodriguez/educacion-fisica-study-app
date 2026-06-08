@@ -895,6 +895,46 @@ function init() {
         document.getElementById('levelup-overlay').classList.add('hidden');
     });
 
+    // Report screen logic
+    const reportType = document.getElementById('report-type');
+    const reportQGroup = document.getElementById('report-question-group');
+    const reportFGroup = document.getElementById('report-feature-group');
+    const reportQInput = document.getElementById('report-question');
+    const reportFInput = document.getElementById('report-feature');
+
+    // Populate questions datalist
+    const qDatalist = document.getElementById('questions-datalist');
+    questions.forEach((q, idx) => {
+        const option = document.createElement('option');
+        const shortText = q.text.length > 80 ? q.text.substring(0, 80) + '...' : q.text;
+        option.value = `Q${idx + 1}: ${shortText}`;
+        qDatalist.appendChild(option);
+    });
+
+    reportType.addEventListener('change', (e) => {
+        reportQGroup.classList.add('hidden');
+        reportFGroup.classList.add('hidden');
+        reportQInput.required = false;
+        reportFInput.required = false;
+
+        if (e.target.value === 'question') {
+            reportQGroup.classList.remove('hidden');
+            reportQInput.required = true;
+        } else if (e.target.value === 'feature') {
+            reportFGroup.classList.remove('hidden');
+            reportFInput.required = true;
+        }
+    });
+
+    document.getElementById('report-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Report submitted successfully! Thank you for your feedback.');
+        e.target.reset();
+        reportQGroup.classList.add('hidden');
+        reportFGroup.classList.add('hidden');
+        showScreen('dashboard');
+    });
+
     // Initial render
     renderDashboard();
 

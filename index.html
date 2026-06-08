@@ -47,6 +47,10 @@
                 <span class="nav-icon">⚙️</span>
                 <span class="nav-label">Settings</span>
             </button>
+            <button class="nav-btn" data-screen="report" id="nav-report">
+                <span class="nav-icon">🚩</span>
+                <span class="nav-label">Report</span>
+            </button>
         </nav>
 
         <!-- ═══════════ DASHBOARD ═══════════ -->
@@ -287,6 +291,55 @@
                     <button class="btn-outline btn-danger" id="settings-reset">🗑️ Reset All Progress</button>
                 </div>
                 <input type="file" id="settings-import-file" class="hidden" accept=".json">
+            </div>
+        </section>
+
+        <!-- ═══════════ REPORT ═══════════ -->
+        <section id="screen-report" class="screen">
+            <div class="card">
+                <h1 class="title" style="font-size: 1.8rem; margin-bottom: 1.5rem;">🚩 <span class="accent">Report Issue</span></h1>
+                <p class="subtitle" style="text-align: left; margin-bottom: 1rem;">Found a problem? Let us know!</p>
+
+                <form id="report-form">
+                    <div class="settings-group">
+                        <label for="report-type">Type of Issue</label>
+                        <select id="report-type" class="settings-select" required>
+                            <option value="" disabled selected>Select an option...</option>
+                            <option value="question">Question Error</option>
+                            <option value="feature">App Feature / Bug</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div id="report-question-group" class="settings-group hidden">
+                        <label for="report-question">Which question?</label>
+                        <input list="questions-datalist" id="report-question" class="settings-input" placeholder="Search for a question...">
+                        <datalist id="questions-datalist">
+                            <!-- Populated by JS -->
+                        </datalist>
+                    </div>
+
+                    <div id="report-feature-group" class="settings-group hidden">
+                        <label for="report-feature">Which feature?</label>
+                        <input list="features-datalist" id="report-feature" class="settings-input" placeholder="Search for a feature...">
+                        <datalist id="features-datalist">
+                            <option value="Dashboard / Home">
+                            <option value="Study Session">
+                            <option value="Statistics">
+                            <option value="Settings / LLM">
+                            <option value="Import / Export Data">
+                        </datalist>
+                    </div>
+
+                    <div class="settings-group">
+                        <label for="report-details">Details</label>
+                        <textarea id="report-details" class="settings-input" style="min-height: 120px; resize: vertical;" placeholder="Describe the issue here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-outline" style="background: linear-gradient(135deg, var(--error-color, #ef4444), #f87171); color: white; border: none; padding: 0.8rem 1.5rem; margin-top: 1rem; width: 100%;">
+                        Submit Report
+                    </button>
+                </form>
             </div>
         </section>
     </main>
