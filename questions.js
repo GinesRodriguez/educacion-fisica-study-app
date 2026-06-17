@@ -633,6 +633,494 @@ const questions = [
     correctAnswer: "60%",
     explanation: "A standard PE session follows the 20-60-20 structure: Warm up (20% — physiological/psychological preparation), Main Phase (60% — peak physical/intellectual activity), and Cool down (20% — physiological/emotional recovery).",
     reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 14 }
+  },
+
+  // ═══════════════════════════════════════════
+  //  NEW QUESTIONS — 3 MC PER UNIT
+  // ═══════════════════════════════════════════
+
+  // ── Unit 1 (3 new MC) ──
+  {
+    topic: "Unit 1: Conceptualization of PE",
+    type: "multiple_choice",
+    text: "Which of the following is NOT one of the functions of Physical Education in the school context?",
+    options: [
+      "Compensatory",
+      "Cathartic",
+      "Legislative",
+      "Hedonistic"
+    ],
+    correctAnswer: "Legislative",
+    explanation: "The functions of PE in school include: compensatory, anatomical, aesthetic/expressive, hygienic, hedonistic, communicative, agonist, and cathartic. 'Legislative' is not a function of PE.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 1 }
+  },
+  {
+    topic: "Unit 1: Conceptualization of PE",
+    type: "multiple_choice",
+    text: "What characterizes the 2nd stage of PE evolution in Spain (1980-1990)?",
+    options: [
+      "Behaviorist model focused on product",
+      "Sports training focus and competitive effectiveness",
+      "Constructivist model with holistic perspective",
+      "Implementation of the LOMLOE law"
+    ],
+    correctAnswer: "Sports training focus and competitive effectiveness",
+    explanation: "The 2nd stage (1980-1990) was characterized by a loss of references and a shift towards sports training focus with competitive effectiveness as the main goal.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 2 }
+  },
+  {
+    topic: "Unit 1: Conceptualization of PE",
+    type: "multiple_choice",
+    text: "According to Devís-Devís & Peiró-Velert (1992), which educational model uses utilitarian pedagogy and directive teaching?",
+    options: [
+      "Psycho-corporal model",
+      "Socio-motor model",
+      "Physical-sports model",
+      "Constructivist model"
+    ],
+    correctAnswer: "Physical-sports model",
+    explanation: "The Physical-sports model is based on natural sciences, uses utilitarian pedagogy, directive teaching, and quantitative evaluation.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 2 }
+  },
+
+  // ── Unit 2 (3 new MC) ──
+  {
+    topic: "Unit 2: Curriculum Design",
+    type: "multiple_choice",
+    text: "Which of the following is a NEW curriculum element introduced by the LOMLOE law?",
+    options: [
+      "Stage Objectives",
+      "Output Profile (Perfil de salida)",
+      "Key Competences",
+      "Evaluation Criteria"
+    ],
+    correctAnswer: "Output Profile (Perfil de salida)",
+    explanation: "The LOMLOE introduced new curriculum elements including the Output Profile (Perfil de salida), Basic Knowledge, and Learning Situations alongside existing elements like Stage Objectives, Key Competences, and Evaluation Criteria.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 4 }
+  },
+  {
+    topic: "Unit 2: Curriculum Design",
+    type: "multiple_choice",
+    text: "According to the curriculum design, which learning trend defines learning as 'response acquisition'?",
+    options: [
+      "Constructivism",
+      "Cognitivism",
+      "Behaviorism",
+      "Competency-based learning"
+    ],
+    correctAnswer: "Behaviorism",
+    explanation: "Behaviorism defines learning as response acquisition. Cognitivism defines it as knowledge acquisition, Constructivism as construction of meanings, and the most modern approach focuses on achievement of competencies.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 3 }
+  },
+  {
+    topic: "Unit 2: Curriculum Design",
+    type: "multiple_choice",
+    text: "The curriculum in the Spanish educational system is characterized as:",
+    options: [
+      "Closed, mandatory, and rigid",
+      "Open, prescriptive, and flexible",
+      "Optional, descriptive, and fixed",
+      "Experimental, suggestive, and adaptive"
+    ],
+    correctAnswer: "Open, prescriptive, and flexible",
+    explanation: "The Spanish curriculum is open (allows adaptation), prescriptive (sets minimum requirements), and flexible (can be modified by educational centers and teachers).",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 3 }
+  },
+
+  // ── Unit 3 (3 new MC) ──
+  {
+    topic: "Unit 3: Curriculum Development",
+    type: "multiple_choice",
+    text: "Which key competence is exemplified in PE by 'performing dances from different countries'?",
+    options: [
+      "Plurilingual competence",
+      "Cultural awareness and expression competence",
+      "Personal, social and learning to learn competence",
+      "Citizenship competence"
+    ],
+    correctAnswer: "Cultural awareness and expression competence",
+    explanation: "Cultural awareness and expression competence is exemplified in PE by performing dances from different countries. Plurilingual competence uses traditional games in foreign languages.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 5 }
+  },
+  {
+    topic: "Unit 3: Curriculum Development",
+    type: "multiple_choice",
+    text: "What are the characteristics of the 1st level of curriculum concretion?",
+    options: [
+      "Concrete, personalized, modifiable, shared, innovative",
+      "Autonomous, coordinated, coherent",
+      "Normative, prescriptive, open/flexible, counsellor",
+      "Specific, adaptive, individual, practical"
+    ],
+    correctAnswer: "Normative, prescriptive, open/flexible, counsellor",
+    explanation: "The 1st level (State/Autonomous Communities) is normative, prescriptive, open/flexible, and serves as counsellor. The 2nd level is autonomous, coordinated, coherent. The 3rd level is concrete, personalized, modifiable, shared, innovative.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 5 }
+  },
+  {
+    topic: "Unit 3: Curriculum Development",
+    type: "multiple_choice",
+    text: "Which cross-cutting area in PE is exemplified by 'having a student act as referee'?",
+    options: [
+      "Peace Education",
+      "Health Education",
+      "Moral and Civic Education",
+      "Equal Opportunities Education"
+    ],
+    correctAnswer: "Moral and Civic Education",
+    explanation: "Moral and Civic Education is exemplified by having a student act as referee. Peace Education uses fair play, Health Education includes washing up after PE, and Equal Opportunities uses heterogeneous grouping.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 6 }
+  },
+
+  // ── Unit 4 (3 new MC) ──
+  {
+    topic: "Unit 4: Content Areas in PE (I)",
+    type: "multiple_choice",
+    text: "What are the two pillars of body balance in body expression?",
+    options: [
+      "Rhythm and coordination",
+      "Technique and spontaneity",
+      "Strength and flexibility",
+      "Body and space"
+    ],
+    correctAnswer: "Technique and spontaneity",
+    explanation: "According to the notes, the two pillars of body balance in body expression are technique and spontaneity.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 8 }
+  },
+  {
+    topic: "Unit 4: Content Areas in PE (I)",
+    type: "multiple_choice",
+    text: "What are the four currents of body expression?",
+    options: [
+      "Artistic, Musical, Theatrical, Athletic",
+      "Social, Psychological, Artistic, Pedagogical",
+      "Physical, Cognitive, Motor, Emotional",
+      "Cultural, Scientific, Technical, Practical"
+    ],
+    correctAnswer: "Social, Psychological, Artistic, Pedagogical",
+    explanation: "The four currents of body expression are: Social, Psychological, Artistic, and Pedagogical.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 8 }
+  },
+  {
+    topic: "Unit 4: Content Areas in PE (I)",
+    type: "multiple_choice",
+    text: "Which type of sensations provide information from the outside world?",
+    options: [
+      "Interoceptive sensations",
+      "Proprioceptive sensations",
+      "Exteroceptive sensations",
+      "Kinesthetic sensations"
+    ],
+    correctAnswer: "Exteroceptive sensations",
+    explanation: "Exteroceptive sensations provide information from the outside world, while interoceptive sensations provide information from one's own body.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 7 }
+  },
+
+  // ── Unit 5 (3 new MC) ──
+  {
+    topic: "Unit 5: Content Areas in PE (II)",
+    type: "multiple_choice",
+    text: "How are Basic Motor Skills (BMS) best defined?",
+    options: [
+      "Advanced athletic techniques for competitive sports",
+      "Skills for solving daily problems with high effectiveness and efficiency",
+      "Specialized motor patterns learned through repetitive training",
+      "Movements that require minimal cognitive involvement"
+    ],
+    correctAnswer: "Skills for solving daily problems with high effectiveness and efficiency",
+    explanation: "Basic Motor Skills are defined as those that allow solving daily problems with high effectiveness and efficiency, such as moving autonomously and reaching objects.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 9 }
+  },
+  {
+    topic: "Unit 5: Content Areas in PE (II)",
+    type: "multiple_choice",
+    text: "According to the classification of sports by uncertainty, which category does NOT exist?",
+    options: [
+      "Individual",
+      "Collaboration-opposition",
+      "Aesthetic",
+      "Cooperation"
+    ],
+    correctAnswer: "Aesthetic",
+    explanation: "Sports are classified by uncertainty into four categories: Individual, Collaboration-opposition, Opposition, and Cooperation. 'Aesthetic' is not one of the categories.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 9 }
+  },
+  {
+    topic: "Unit 5: Content Areas in PE (II)",
+    type: "multiple_choice",
+    text: "When developing basic physical capacities in primary education, evaluation should focus on:",
+    options: [
+      "The final result and performance numbers",
+      "Comparison with standardized national averages",
+      "The process rather than the result",
+      "Competition rankings among students"
+    ],
+    correctAnswer: "The process rather than the result",
+    explanation: "Physical capacities in primary education must be developed playfully, and evaluation should focus on the process rather than the result, starting with an initial assessment.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 9 }
+  },
+
+  // ── Unit 6 (3 new MC) ──
+  {
+    topic: "Unit 6: Teaching Practice",
+    type: "multiple_choice",
+    text: "Which of the following is one of the 5 core didactic principles?",
+    options: [
+      "Competition",
+      "Standardization",
+      "Globalization",
+      "Specialization"
+    ],
+    correctAnswer: "Globalization",
+    explanation: "The 5 core didactic principles are: Communication, Socialization, Globalization, Creativity, and Opening.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 10 }
+  },
+  {
+    topic: "Unit 6: Teaching Practice",
+    type: "multiple_choice",
+    text: "In the Teaching Games for Understanding (TGfU) model, games are categorized by their internal logic into:",
+    options: [
+      "Individual, team, combat, and artistic",
+      "Invasion, net, field/striking, and precision",
+      "Closed, open, mixed, and adaptive",
+      "Cooperative, competitive, recreational, and educational"
+    ],
+    correctAnswer: "Invasion, net, field/striking, and precision",
+    explanation: "In TGfU, games are categorized by their internal logic into four types: invasion games, net games, field/striking games, and precision games.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 10 }
+  },
+  {
+    topic: "Unit 6: Teaching Practice",
+    type: "multiple_choice",
+    text: "What are the four forms of participation in Service Learning?",
+    options: [
+      "Teaching, coaching, mentoring, and evaluating",
+      "Direct service, indirect service, advocacy, and research",
+      "Planning, executing, reflecting, and presenting",
+      "Observation, practice, feedback, and assessment"
+    ],
+    correctAnswer: "Direct service, indirect service, advocacy, and research",
+    explanation: "Service Learning has 4 forms of participation: direct service, indirect service, advocacy, and research. It starts from a real social need and connects learning with community service.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 11 }
+  },
+
+  // ── Unit 7 (3 new MC) ──
+  {
+    topic: "Unit 7: Didactic Intervention",
+    type: "multiple_choice",
+    text: "According to research on disruptive behaviors in PE, what percentage is related to the teacher?",
+    options: [
+      "13%",
+      "17%",
+      "50%",
+      "70%"
+    ],
+    correctAnswer: "70%",
+    explanation: "Disruptive behaviors are related to the teacher (70%), the activity (17%), and colleagues (13%).",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 13 }
+  },
+  {
+    topic: "Unit 7: Didactic Intervention",
+    type: "multiple_choice",
+    text: "What type of feedback forces the learner to reflect and promotes autonomy?",
+    options: [
+      "Evaluative feedback",
+      "Descriptive feedback",
+      "Interrogative feedback",
+      "Affective-emotional feedback"
+    ],
+    correctAnswer: "Interrogative feedback",
+    explanation: "Interrogative feedback uses questions to force the learner to reflect on their own performance, promoting autonomy. Affective-emotional feedback focuses on motivation.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 13 }
+  },
+  {
+    topic: "Unit 7: Didactic Intervention",
+    type: "multiple_choice",
+    text: "How long should a teacher wait before giving feedback in finalist tasks (closed skills)?",
+    options: [
+      "Immediately, without delay",
+      "1-3 seconds",
+      "6-20 seconds",
+      "At least 60 seconds"
+    ],
+    correctAnswer: "6-20 seconds",
+    explanation: "For finalist tasks (closed skills), the teacher should wait 6-20 seconds before providing feedback. Concurrent feedback is given during the execution for continuous tasks.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 13 }
+  },
+
+  // ── Unit 8 (3 new MC) ──
+  {
+    topic: "Unit 8: Attention to Diversity",
+    type: "multiple_choice",
+    text: "What does the position of 'Segregation' towards diversity mean?",
+    options: [
+      "Completely excluding students from the educational system",
+      "Separating students into an isolated group",
+      "Integrating students with adaptations",
+      "Embracing differences as a right to good education"
+    ],
+    correctAnswer: "Separating students into an isolated group",
+    explanation: "Segregation means separating students into an isolated group. Exclusion means completely leaving them out. Integration points to the deficit. Inclusion embraces differences as a right.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 15 }
+  },
+  {
+    topic: "Unit 8: Attention to Diversity",
+    type: "multiple_choice",
+    text: "Which of the following is a rule adaptation strategy for inclusive PE?",
+    options: [
+      "Using only essential rules and controlled inequality in team numbers",
+      "Eliminating all rules entirely",
+      "Making rules more complex to challenge all students equally",
+      "Applying the same strict rules regardless of ability"
+    ],
+    correctAnswer: "Using only essential rules and controlled inequality in team numbers",
+    explanation: "Rule adaptations include using only essential rules, eliminating direct competition, and applying controlled inequality (e.g., uneven team numbers to balance ability differences).",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 16 }
+  },
+  {
+    topic: "Unit 8: Attention to Diversity",
+    type: "multiple_choice",
+    text: "Which of the following is NOT an ACNEAE subgroup?",
+    options: [
+      "Maturational delay",
+      "High intellectual abilities",
+      "Gifted athletes",
+      "Attention/learning disorders (ADHD, dyslexia, dyscalculia)"
+    ],
+    correctAnswer: "Gifted athletes",
+    explanation: "ACNEAE subgroups include: SEN (disability/severe behavioral disorders), Maturational delay, Attention/learning disorders (ADHD, dyslexia, dyscalculia), Severe ignorance of learning language/socio-educational vulnerability, High intellectual abilities, and Late incorporation. 'Gifted athletes' is not one.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 15 }
+  },
+
+  // ── Unit 9 (3 new MC) ──
+  {
+    topic: "Unit 9: ICT in Physical Education",
+    type: "multiple_choice",
+    text: "According to Bloom's Taxonomy applied to PE apps, which level corresponds to Google Docs/Forms?",
+    options: [
+      "Create",
+      "Apply",
+      "Evaluate",
+      "Analyze"
+    ],
+    correctAnswer: "Evaluate",
+    explanation: "In Bloom's Taxonomy for PE Apps: Create (PicPlayPost, Vivavideo), Evaluate (Google Docs/Forms), Analyze (Coach's Eye, Runtastic, Sworkit), Apply (Kahoot, QR/Unitag), Understand (Padlet, Blogger), Remember (Pinterest, Symbaloo).",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 18 }
+  },
+  {
+    topic: "Unit 9: ICT in Physical Education",
+    type: "multiple_choice",
+    text: "What term describes the historically scarce relationship between PE and technology?",
+    options: [
+      "Digital divide",
+      "Technological impermeability",
+      "Technological illiteracy",
+      "Digital resistance"
+    ],
+    correctAnswer: "Technological impermeability",
+    explanation: "The notes describe PE's historically scarce relationship with technology as 'technological impermeability', which must be overcome through a paradigm shift.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 17 }
+  },
+  {
+    topic: "Unit 9: ICT in Physical Education",
+    type: "multiple_choice",
+    text: "According to Bloom's Taxonomy applied to PE, which apps correspond to the 'Remember' level?",
+    options: [
+      "Kahoot and QR/Unitag",
+      "Padlet and Blogger",
+      "Pinterest and Symbaloo",
+      "Coach's Eye and Runtastic"
+    ],
+    correctAnswer: "Pinterest and Symbaloo",
+    explanation: "Remember level: Pinterest, Symbaloo. Understand level: Padlet, Blogger. Apply level: Kahoot, QR/Unitag. Analyze level: Coach's Eye, Runtastic, Sworkit.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 18 }
+  },
+
+  // ── Unit 10 (3 new MC) ──
+  {
+    topic: "Unit 10: Evaluation in PE",
+    type: "multiple_choice",
+    text: "Which evaluation instrument uses a YES/NO format?",
+    options: [
+      "Rubrics",
+      "Portfolios",
+      "Checklists",
+      "Surveys"
+    ],
+    correctAnswer: "Checklists",
+    explanation: "Checklists use a YES/NO format to record whether a behavior or skill is observed. Rubrics use a 1-5 scale to measure levels of achievement.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 20 }
+  },
+  {
+    topic: "Unit 10: Evaluation in PE",
+    type: "multiple_choice",
+    text: "In the motor area of student evaluation, technique is used to evaluate:",
+    options: [
+      "Open skills",
+      "Closed skills",
+      "Cognitive knowledge",
+      "Attitudinal behaviors"
+    ],
+    correctAnswer: "Closed skills",
+    explanation: "In the motor area, technique is used for evaluating closed skills, while tactics are used for evaluating open skills.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 19 }
+  },
+  {
+    topic: "Unit 10: Evaluation in PE",
+    type: "multiple_choice",
+    text: "Which is NOT a purpose of evaluating the teaching staff?",
+    options: [
+      "Diagnostic",
+      "Instructive",
+      "Competitive",
+      "Developer"
+    ],
+    correctAnswer: "Competitive",
+    explanation: "The purposes of evaluating the teaching staff are: diagnostic, instructive, educational, and developer. 'Competitive' is not one of them.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 20 }
+  },
+
+  // ── Unit 11 (3 new MC) ──
+  {
+    topic: "Unit 11: Planning and Programming",
+    type: "multiple_choice",
+    text: "According to Viciana's theoretical planning phases, what is the first phase?",
+    options: [
+      "Design",
+      "Evaluation",
+      "Realization",
+      "Diagnosis"
+    ],
+    correctAnswer: "Diagnosis",
+    explanation: "According to Viciana (2001), the planning phases are: 1. Diagnosis, 2. Design, 3. Realization, 4. Evaluation.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 21 }
+  },
+  {
+    topic: "Unit 11: Planning and Programming",
+    type: "multiple_choice",
+    text: "What are the three theoretical phases of the planning process?",
+    options: [
+      "Analysis, Synthesis, Execution",
+      "Introduction, Development, Conclusion",
+      "Preactive/preinteractive, Interactive, Postactive/reflection",
+      "Diagnosis, Implementation, Assessment"
+    ],
+    correctAnswer: "Preactive/preinteractive, Interactive, Postactive/reflection",
+    explanation: "The three theoretical phases of planning are: 1. Preactive/preinteractive (before teaching), 2. Application/interactive (during teaching), and 3. Evaluation/postactive/reflection (after teaching).",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 21 }
+  },
+  {
+    topic: "Unit 11: Planning and Programming",
+    type: "multiple_choice",
+    text: "According to the notes, what distinguishes expert teachers from novice teachers regarding planning?",
+    options: [
+      "Experts refuse to plan while novices plan excessively",
+      "Experts don't need highly detailed plans; novices need them most but often show lack of interest",
+      "Both experts and novices plan at the same level of detail",
+      "Novices plan more effectively than experts"
+    ],
+    correctAnswer: "Experts don't need highly detailed plans; novices need them most but often show lack of interest",
+    explanation: "Expert teachers don't need highly detailed plans due to their experience. Novice teachers need planning the most but often show a lack of interest in detailed planning.",
+    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 21 }
   }
 ];
 
