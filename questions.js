@@ -268,11 +268,16 @@ const questions = [
   },
   {
     topic: "Unit 2: Curriculum Design",
-    type: "short_answer",
-    text: "According to the epistemological source of curriculum design, what is the role of the discipline?",
-    keywords: ["internal", "logic", "scientific", "knowledge", "structure"],
-    modelAnswer: "The epistemological source provides the internal logic of the discipline and its scientific knowledge structure.",
-    explanation: "It defines what Physical Education is as a subject and how its specific knowledge is structured.",
+    type: "multiple_choice",
+    text: "What does the epistemological source of curriculum design provide?",
+    options: [
+      "The psychological development stages of the students",
+      "The internal logic of the discipline and its scientific knowledge structure",
+      "The social demands and cultural expectations of the community",
+      "The pedagogical methods and teaching strategies"
+    ],
+    correctAnswer: "The internal logic of the discipline and its scientific knowledge structure",
+    explanation: "The epistemological source provides the internal logic of the discipline and its scientific knowledge structure. The psychological source addresses student development, the sociological source addresses social demands, and the pedagogical source addresses teaching methods.",
     reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 3 }
   },
   {
