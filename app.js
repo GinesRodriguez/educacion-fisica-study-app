@@ -978,13 +978,18 @@ function init() {
     const directQ = parseInt(urlParams.get('q'));
     if (directQ && directQ >= 1 && directQ <= questions.length) {
         const qIdx = directQ - 1;
+        sessionMode = 'all';
+        sessionTopicFilter = null;
         sessionQueue = [qIdx];
         sessionIndex = 0;
         sessionCorrect = 0;
         sessionTotal = 0;
         sessionStreak = 0;
+        sessionXpEarned = 0;
+        isAnswered = false;
+        renderTopicFilter();
         showScreen('study');
-        showQuestion();
+        renderQuestion();
     }
 
     console.log(`PE Didactics Study App loaded — ${questions.length} questions across ${TOPICS.length} topics`);
