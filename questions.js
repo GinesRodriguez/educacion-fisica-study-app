@@ -177,10 +177,10 @@ const questions = [
   {
     topic: "Unit 8: Attention to Diversity",
     type: "short_answer",
-    text: "Provide examples of how tasks can be adapted to facilitate the active participation of all students.",
+    text: "What are the 6 actions or areas to adapt tasks to include students with disabilities and facilitate active participation?",
     keywords: ["rules", "equipment", "skill", "space", "methodology", "facilities"],
-    modelAnswer: "Tasks can be adapted by modifying rules (e.g., eliminating direct competition), changing equipment (using softer/larger balls), adjusting skill level and space (bringing targets closer), and altering methodology and facilities.",
-    explanation: "Adaptations ensure accessibility and can involve changes to the rules, the equipment used, the spatial requirements, and the teaching methodology.",
+    modelAnswer: "The 6 actions are: 1) Modify rules, 2) Adapt equipment, 3) Adjust skill level, 4) Modify space, 5) Alter methodology, 6) Adapt facilities.",
+    explanation: "Adaptations ensure accessibility and can involve changes to the rules, the equipment used, the skill level, the spatial requirements, the teaching methodology, and the facilities.",
     reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 16 }
   },
   {
