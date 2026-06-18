@@ -973,6 +973,20 @@ function init() {
     // Initial render
     renderDashboard();
 
+    // Deep link support: ?q=N jumps to question N
+    const urlParams = new URLSearchParams(window.location.search);
+    const directQ = parseInt(urlParams.get('q'));
+    if (directQ && directQ >= 1 && directQ <= questions.length) {
+        const qIdx = directQ - 1;
+        sessionQueue = [qIdx];
+        sessionIndex = 0;
+        sessionCorrect = 0;
+        sessionTotal = 0;
+        sessionStreak = 0;
+        showScreen('study');
+        showQuestion();
+    }
+
     console.log(`PE Didactics Study App loaded — ${questions.length} questions across ${TOPICS.length} topics`);
 }
 
