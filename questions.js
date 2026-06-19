@@ -177,11 +177,11 @@ const questions = [
   {
     topic: "Unit 8: Attention to Diversity",
     type: "short_answer",
-    text: "What are the 6 actions or areas to adapt tasks to include students with disabilities and facilitate active participation?",
-    keywords: ["rules", "equipment", "skill", "space", "methodology", "facilities"],
-    modelAnswer: "The 6 actions are: 1) Modify rules, 2) Adapt equipment, 3) Adjust skill level, 4) Modify space, 5) Alter methodology, 6) Adapt facilities.",
-    explanation: "Adaptations ensure accessibility and can involve changes to the rules, the equipment used, the skill level, the spatial requirements, the teaching methodology, and the facilities.",
-    reference: { file: "APUNTES DIDÁCTICA EDUCACIÓN FÍSICA.pdf", page: 16 }
+    text: "What are the 6 strategies to facilitate the active and effective participation of students with disabilities in PE?",
+    keywords: ["values", "multilevel", "compensation", "cooperative", "adaptation", "adapted", "sports"],
+    modelAnswer: "The 6 strategies are: 1) Education in values and attitudes, 2) Multilevel teaching, 3) Compensation for limitations in competition, 4) Cooperative learning and activities, 5) Adaptation of tasks, and 6) Introducing adapted sports for people with disabilities.",
+    explanation: "These 6 strategies ensure that students with disabilities are fully integrated. Adaptation of tasks is just one of these six strategies, which also include cooperative learning, adapted sports, and multilevel teaching.",
+    reference: { file: "Temario Original", page: "Unit 8" }
   },
   {
     topic: "Unit 9: ICT in Physical Education",
